@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Explore Ukraine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;800&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Work Sans', sans-serif;
+            background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/019/original/ornament.png?1656516410);
+            background-color: #fbfbfb;
+        }
+        h1 {
+            text-align: left;
+            text-transform: uppercase;
+            color: #000;
+            font-size: 55px;
+            line-height: 80px;
+            margin: 0;
+            padding-left: 15px;
+            font-family: 'Work Sans', sans-serif;
+        }
+        span {
+            padding: 4px;
+            background-color: #fcdf51;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 23px;
+            opacity: 0.7;
+            text-align: left;
+            font-family: 'Work Sans', sans-serif;
+            padding-left: 15px;
+        }
+        img {
+            width: 56%;
+            margin: 0 0 0 30px;
+        }
+
+        a {
+            width: 150px;
+            display: block;
+            margin: 40px auto 40px 18px;
+            border: 1px solid #1a64d6;
+            background: #1a64d6;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            text-decoration: none;
+            padding: 15px 24px;
+            box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+            cursor: pointer;
+        }
+
+        a:hover .arrow{
+            right: -13px;
+            transition: all 500ms;
+        }
+        .logo {
+            margin: 0;
+            background-color: cornsilk;
+        }
+        .logo-img{
+            width: 11%;
+        }
+        .part{
+            margin: 0 auto;
+            width: 90%;
+        }
+        .text {
+            display: inline-block;
+            width: 40%;
+            margin:  0 auto;
+        }
+        .arrow {
+            background-color: #1a64d6;
+            position: relative;
+            right: 0px;
+        }
+        .visit-btn {
+            width: 300px;
+            display: block;
+            margin: 50px auto;
+            padding: 17px 24px;
+            background-color: #fbfbfb;
+            border: 1px solid #fbfbfb;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 800;
+            cursor: pointer;
+            color: #1a64d6;
+            text-transform: uppercase;
+            box-shadow: rgba(37, 39, 89, 0.08) 7px 0px 10px 2px;
+            transition: all 300ms ease;
+        }
+        .visit-btn:hover {
+            border: 1px solid #1a64d6;
+        }
+        .author{
+            font-size: 15px;
+            text-align: right;
+        }
+        .messageToUser {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+            background: #fcdf51;
+            text-align: center;
+            padding: 30px 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/018/original/Logo.png?1656516356" alt="logo" class="logo-img">
+    </div>
+    <div class="part">
+        <div class="text">
+            <h1>
+                <span>Ukrainian</span>
+                <br>
+                <span>cuisine</span>
+            </h1>
+            <p>
+                In Ukraine we know for sure:
+                the way to a guest's heart is through his stomach!
+                Especially if our gastronomic
+                specialties are accompanied by our distinguished
+                wine selection. And they definitely are!
+            </p>
+            <a href="https://ukraine.ua/explore/ukrainian-cuisine/">
+                Find out more
+                <span class="arrow">&#8594</span>
+            </a>
+        </div>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/020/original/Shpundra.-Ukrainian-folk-dish.jpg?1656516445" alt="">
+    </div>
+    <div class="part">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/021/original/shutterstock.jpg?1656516477" alt="" width="75%">
+        <div class="text">
+            <h1>
+                <span>History</span>
+                <br>
+                <span>of Ukraine</span>
+            </h1>
+            <p>
+                The lands that make up Ukraine’s modern territory
+                are home to thousands of mysteries and the stories of hundreds of
+                peoples, states and cultures. Over the centuries,
+                heroic and dramatic plots have taken place here – the formation and
+                destruction of civilizations, the intermingling and
+                confrontations of nations, wars, revolutions, cultural decline and
+                revival.
+            </p>
+            <a href="https://ukraine.ua/explore/origins-history-of-ukraine/">
+                Find out more
+                <span class="arrow">&#8594</span>
+            </a>
+        </div>
+    </div>
+    <button class="visit-btn">
+        Visit Ukraine
+    </button>
+    <p class="messageToUser"></p>
+    <p class="author">
+        Coded by Tetiana Tsymbal
+    </p>
+    <script>
+        function bildMessage(userName, userCity, userEmail) {
+            let messageWindow = document.querySelector(".messageToUser");
+            messageWindow.innerHTML = `Hello, ${userName}! <br/> We will send all possible options how to get from ${userCity} to Kyiv to your mail: ${userEmail} <br> We look forward to seeing you!`;
+        }
+        function getUserInfo() {
+            let userName = prompt("What is your name?")
+            let userCity = prompt("What city do you live in?");
+            let userEmail = prompt("What is your email?")
+            bildMessage(userName, userCity, userEmail);
+        }
+        let visitButton = document.querySelector("button");
+        visitButton.addEventListener("click", getUserInfo);
+    </script>
+</body>
+
+</html>
